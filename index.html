@@ -182,16 +182,16 @@ We introduce Bayesian confidence calibration - a framework to obtain calibrated 
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.png" alt="Multivariate calibration (bottom) vs. standard confidence calibration (top)."/>
+        <img src="static/images/carousel1.png" alt="Stochastic variational inference (SVI) for calibration"/>
         <h2 class="subtitle has-text-centered">
-          Extended box-sensitive or multivariate calibration proposed in this paper (bottom) vs. standard confidence calibration (top). An object detector predicts a class with a certain confidence and a box proposal containing information about location and scale. Standard calibration methods only take the confidence into account. Our approach also includes the regression branch of an object detector in order to improve the calibration results.
+          Using stochastic variational inference (SVI), we are able to obtain not only a single calibrated estimate but also an additional prediction interval quantifying the epistemic uncertainty within the calibration mapping. We use a position-dependent calibration framework, but place distributions over the calibration parameters to infer a sample distribution for a single prediction.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.png" alt="Dependent Logistic Calibration"/>
+        <img src="static/images/carousel2.png" alt="Stochastic variational inference (SVI) for calibration"/>
         <h2 class="subtitle has-text-centered">
-          Toy example of position dependent calibration. 
+          An object detection model outputs a confidence estimate attached to each bounding box with a certain position and shape. This information is used for position & scale dependent confidence calibration. Instead of maximum likelihood estimation, we utilize stochastic variational inference to predict a sample distribution for each detection. On the one hand, this sample distribution reflects the observed frequency and on the other hand the epistemic uncertainty of the calibration model for a certain confidence, position and shape. Using highest density interval estimation, it is thus possible to denote a prediction interval for each calibrated estimate.
         </h2>
       </div>
   </div>
